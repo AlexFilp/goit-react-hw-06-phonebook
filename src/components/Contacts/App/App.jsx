@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { getFilter, getContacts } from 'redux/selectors';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ContactsTitle, Container, FromTitle } from './App.styled';
+import { ContactsTitle, Container, FormTitle } from './App.styled';
 
 export const App = () => {
   const filter = useSelector(getFilter);
@@ -23,7 +23,7 @@ export const App = () => {
 
   return (
     <Container>
-      <FromTitle>Phonebook</FromTitle>
+      <FormTitle>Phonebook</FormTitle>
       <Form />
       <ContactsTitle>Contacts</ContactsTitle>
       <Filter />

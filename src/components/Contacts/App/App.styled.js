@@ -4,7 +4,7 @@ export const Container = styled.div`
   padding-left: 30px;
 `;
 
-export const FromTitle = styled.h1`
+export const FormTitle = styled.h1`
   font-size: 40px;
 `;
 
