@@ -9,5 +9,10 @@ export const Container = styled.div`
 
 export const Label = styled.span`
   display: block;
+  font-size: 20px;
   margin-bottom: 10px;
+`;
+
+export const Input = styled.input`
+  font-size: 18px;
 `;

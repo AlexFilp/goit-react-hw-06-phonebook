@@ -1,11 +1,12 @@
-import { GlobalStyle } from './GlobalStyle';
-import { Form } from './Form/Form';
-import { Contacts } from './Contacts/Contacts';
-import { Filter } from './Filter/Filter';
+import { GlobalStyle } from '../../GlobalStyle';
+import { Form } from '../../Form/Form';
+import { Contacts } from '../Contacts';
+import { Filter } from '../../Filter/Filter';
 import { useSelector } from 'react-redux';
 import { getFilter, getContacts } from 'redux/selectors';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ContactsTitle, Container, FromTitle } from './App.styled';
 
 export const App = () => {
   const filter = useSelector(getFilter);
@@ -21,18 +22,14 @@ export const App = () => {
   const visibleContacts = getFilteredContacts();
 
   return (
-    <div
-      style={{
-        paddingLeft: 30,
-      }}
-    >
-      <h1>Phonebook</h1>
+    <Container>
+      <FromTitle>Phonebook</FromTitle>
       <Form />
-      <h2>Contacts</h2>
+      <ContactsTitle>Contacts</ContactsTitle>
       <Filter />
       <Contacts visibleContacts={visibleContacts} />
       <GlobalStyle />
       <ToastContainer autoClose={2000} limit={3} position="top-center" />
-    </div>
+    </Container>
   );
 };

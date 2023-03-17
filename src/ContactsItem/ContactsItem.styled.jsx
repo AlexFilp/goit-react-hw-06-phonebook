@@ -16,6 +16,7 @@ export const Text = styled.p``;
 
 export const Btn = styled.button`
   padding: 7px;
+  font-size: 20px;
   transition: color 150ms ease-in, background-color 150ms ease-in;
   background-color: #d3d3d373;
   &:hover,
