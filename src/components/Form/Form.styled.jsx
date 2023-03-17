@@ -30,6 +30,7 @@ export const Input = styled.input`
 export const Btn = styled.button`
   padding: 7px;
   transition: color 150ms ease-in, background-color 150ms ease-in;
+  background-color: #d3d3d373;
   &:hover,
   &:focus {
     color: white;

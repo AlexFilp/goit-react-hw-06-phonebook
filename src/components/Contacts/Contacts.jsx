@@ -1,18 +1,13 @@
-import { List, Item, Text, Btn } from './Contacts.styled';
+import { List } from './Contacts.styled';
 
-export const Contacts = ({ contacts, onDelete }) => {
+import { CotnactsItem } from '../../ContactsItem/ContactsItem';
+
+export const Contacts = ({ visibleContacts }) => {
   return (
     <>
       <List>
-        {contacts.map(({ id, name, number }) => {
-          return (
-            <Item key={id}>
-              <Text>
-                {name}: {number}
-              </Text>
-              <Btn onClick={() => onDelete(id)}>Delete</Btn>
-            </Item>
-          );
+        {visibleContacts.map(({ id, name, number }) => {
+          return <CotnactsItem key={id} id={id} name={name} number={number} />;
         })}
       </List>
     </>
