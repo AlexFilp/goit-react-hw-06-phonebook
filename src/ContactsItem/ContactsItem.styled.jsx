@@ -12,7 +12,9 @@ export const Item = styled.li`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  font-size: 20px;
+`;
 
 export const Btn = styled.button`
   padding: 7px;
