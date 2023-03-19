@@ -1,8 +1,9 @@
 import { ContactForm, Label, Input, Span, Btn } from './Form.styled';
 import { useDispatch } from 'react-redux';
-import { addContact, getContacts } from 'redux/contactsSlice';
+import { addContact } from 'redux/contactsSlice';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import { getContacts } from 'redux/selectors';
 
 export const Form = () => {
   const dispatch = useDispatch();

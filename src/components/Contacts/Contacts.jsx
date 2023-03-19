@@ -1,12 +1,14 @@
 import { List } from './Contacts.styled';
+import { CotnactsItem } from '../ContactsItem/ContactsItem';
+import { useSelector } from 'react-redux';
+import { getfilteredContacts } from 'redux/selectors';
 
-import { CotnactsItem } from '../../ContactsItem/ContactsItem';
-
-export const Contacts = ({ visibleContacts }) => {
+export const Contacts = () => {
+  const filteredContacts = useSelector(getfilteredContacts);
   return (
     <>
       <List>
-        {visibleContacts.map(({ id, name, number }) => {
+        {filteredContacts.map(({ id, name, number }) => {
           return <CotnactsItem key={id} id={id} name={name} number={number} />;
         })}
       </List>
