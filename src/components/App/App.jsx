@@ -1,7 +1,7 @@
-import { GlobalStyle } from '../../GlobalStyle';
-import { Form } from '../../Form/Form';
-import { Contacts } from '../Contacts';
-import { Filter } from '../../Filter/Filter';
+import { GlobalStyle } from '../GlobalStyle';
+import { Form } from '../Form/Form';
+import { Contacts } from '../Contacts/Contacts';
+import { Filter } from '../Filter/Filter';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ContactsTitle, Container, FormTitle } from './App.styled';
